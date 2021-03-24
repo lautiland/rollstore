@@ -46,7 +46,7 @@ let productos = [
 var iva = numero => numero * 1.21;
 
 do {
-    var nombre = prompt("¿Qué producto quiere adquirir?");
+    //var nombre = prompt("¿Qué producto quiere adquirir?");
     nombre = nombre.toLowerCase();
 }while(nombre =="" || nombre == 0)
 
@@ -67,7 +67,7 @@ if(precioUnitario == undefined || precioMayorista == undefined) {
     alert(`El producto ${nombre} no se encuentra en stock o no está disponible`);
 }else {
     do {
-        var unidades = Number(prompt("¿Cuantas unidaes quiere comprar?"));
+        //var unidades = Number(prompt("¿Cuantas unidaes quiere comprar?"));
     }while(unidades =="" || unidades == 0)
     
     function compra(cantidad, precioU, precioM) {
@@ -83,8 +83,7 @@ if(precioUnitario == undefined || precioMayorista == undefined) {
     function display(unidades, nombre, precio) {
         document.write(`<h2>El costo de ${unidades} ${nombre}/s es de $${precio} incluido el IVA.</h2>`);
     }
-    
-    compra(unidades, precioUnitario, precioMayorista);
-    display(unidades, nombre, precio);
 }
 
+compra(unidades, precioUnitario, precioMayorista);
+display(unidades, nombre, precio);
