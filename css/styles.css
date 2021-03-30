@@ -148,5 +148,15 @@ section:nth-of-type(even) {
   color: white; }
 
 h2 {
-  color: #fe4066;
-  font-size: 4rem; }
+  color: #464646;
+  font-size: 4rem;
+  margin-bottom: 4rem; }
+
+button .agregar {
+  background-color: black;
+  color: white;
+  text-decoration: none; }
+
+table {
+  font-size: 1.5rem;
+  font-weight: 700; }

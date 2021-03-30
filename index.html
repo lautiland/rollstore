@@ -37,10 +37,10 @@
                 <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Productos</a>
+                <a class="nav-link" href="#PROD">Productos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"> Carrito</a>
+                <a class="nav-link" href="#CARR"> Carrito</a>
               </li>
             </ul>
           </div>
@@ -58,7 +58,7 @@
             <div class="banner-con text-center">
               <p class="first-title text-lowercase">"...y entrás a aquella tienda que tanto llamo tu atención la noche anterior..."</p>
               <p class="banner-des">La mente vuelve realidad lo que nos imaginamos</p>
-              <a href="#" target="_blank" class="banner-btn">Get started for free</a>
+              <a href="#" target="_blank" class="banner-btn">¡Empieza a rolear ya!</a>
             </div>
         </div>
         </div>
@@ -67,15 +67,31 @@
         
         <div class="main-content">
         
-          <section>
+        <section>
           <div class="container">
             <div id="productos" class="row">
-            <h2 class="col-12 text-center">Productos</h2>
+            <h2 class="col-12 text-center" id="PROD">Productos</h2>
+            </div>
           </div>
-        </div>
         </section>
         <section>
-        
+          <div class="container">
+            <div class="row">
+              <h2 class="col-12 text-center" id="CARR">Carrito</h2>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Producto</th>
+                    <th scope="col"></th>
+                    <th scope="col">Precio</th>
+                  </tr>
+                </thead>
+                <tbody id="carrito">
+                </tbody>
+              </table>
+            </div>
+          </div>
         </section>
         </div>
         
@@ -101,6 +117,7 @@
     </script>
 
     <!-- MI JAVASCRIPT -->
+    <script src="js/productos.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>
