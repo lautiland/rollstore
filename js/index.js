@@ -56,9 +56,13 @@ function cargarCarrito(){
     tbody.innerHTML = tabla + total;
 }
 
+if(JSON.parse(sessionStorage.getItem("carrito")) != null){
+    carrito = JSON.parse(sessionStorage.getItem("carrito", carrito))
+    cargarCarrito()
+}
+
 // EVENTO QUE SE ENCARGA DE AGREGAR UN PRODUCTO AL CARRITO CUANDO LE DAMOS AL BOTON "Agregar al carrito"
 window.addEventListener("DOMContentLoaded", function(){
-    // localStorage.getItem("carrito" ,JSON.parse(carrito))
     let item = document.querySelectorAll(".agregar")
     for(let articulo of item){
         articulo.addEventListener("click", function(){
@@ -67,9 +71,11 @@ window.addEventListener("DOMContentLoaded", function(){
                 for(let i = 0; i<productos.length; i+=1){
                     if( numero == i){
                         return(carrito.push(productos[i]));
+                        
                     }
                 }
             })
+            sessionStorage.setItem("carrito", JSON.stringify(carrito))
             cargarCarrito()
         })
     }
