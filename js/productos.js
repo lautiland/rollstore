@@ -13,7 +13,7 @@ let productos = [
         img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/907/020/products/1024_accesorios_abracadabra-juguetes-dados-transp-rojo_1451-49637647233999189d15936346940040-640-0.jpg",
         precioU: 675,
         precioM: 625,
-        stock: true
+        stock: false
     },
     {
         nombre: "Set Lluvia de Diamantes",
