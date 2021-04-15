@@ -157,6 +157,13 @@ button .agregar {
   color: white;
   text-decoration: none; }
 
+.card {
+  font-size: 150%; }
+
+.card-text {
+  font-size: 120%;
+  font-weight: bold; }
+
 table {
   font-size: 1.5rem;
   font-weight: 700; }
@@ -166,3 +173,6 @@ table {
   color: black;
   background-color: #fe4066;
   border: 2px solid black; }
+
+p {
+  font-size: 20px; }

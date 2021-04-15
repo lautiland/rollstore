@@ -1,23 +1,34 @@
+// FUNCIONALIDAD DEL MENÚ STICKY
+$(window).on(`scroll` ,function(){
+    let $scrollTop = 0
+    $scrollTop = $(window).scrollTop();
+    if ($scrollTop === 0){
+        $(`.header-inner`).removeClass(`navbar-scroll`);
+    }else{
+        $(`.header-inner`).addClass(`navbar-scroll`);
+    }
+})
+
 
 // AÑADO LOS OBJETOS DEL ARRAY "productos" A LA PÁGINA
 let i = 0;
 for (const producto of productos) {
+    $(`.card`).hide();
     if(producto.stock){
         $(`#productos`).append(`<div class="card col-lg-4 col-md-6 col-sm-12">
-                                <img src="${producto.img}">
-                                <h5 class="card-title">${producto.nombre}</h5>
-                                <p class="card-text">$${producto.precioU}</p>
-                                <button class="agregar" data-numero="${i}">Añadir al carrito</button><br>
-                                </div>`);
+        <img src="${producto.img}">
+        <h5 class="card-title">${producto.nombre}</h5>
+        <p class="card-text">$${producto.precioU}</p>
+        <button class="agregar" data-numero="${i}">Añadir al carrito</button><br>
+        </div>`);
     }else {
         $(`#productos`).append(`<div class="card col-lg-4 col-md-6 col-sm-12">
-                                <img src="${producto.img}">
-                                <h5 class="card-title">${producto.nombre}</h5>
-                                <p class="card-text">$${producto.precioU}</p>
-                                <button class="noHay">No hay stock</button><br>
-                                </div>`);
+        <img src="${producto.img}">
+        <h5 class="card-title">${producto.nombre}</h5>
+        <p class="card-text">$${producto.precioU}</p>
+        <button class="noHay">No hay stock</button><br>
+        </div>`);
     }
-
     i += 1;
 }
 
@@ -27,15 +38,15 @@ function cargarCarrito(){
     $(`#carrito`).empty();
     let suma = 0;
     let i = 0;
-
+    
     for (const articulo of carrito) {
         i += 1;
         $(`#carrito`).append(`  <tr>
-                    <th scope="row">${i}</th>
-                    <td>${articulo.nombre}</td>
-                    <td></td>
-                    <td>$${articulo.precioU}</td>
-                    </tr>`);
+        <th scope="row">${i}</th>
+        <td>${articulo.nombre}</td>
+        <td></td>
+        <td>$${articulo.precioU}</td>
+        </tr>`);
         suma += Number(articulo.precioU)
     }
     $(`#carrito`).append(`<tr>
@@ -82,3 +93,6 @@ $(()=>{
         })
     }
 })
+
+// ANIMACIÓNES
+$(`.card`).slideDown("slow");

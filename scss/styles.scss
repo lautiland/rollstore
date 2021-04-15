@@ -70,12 +70,11 @@ display: inline-block;
 color: #ffffff;
 transition: 0.3s;
 text-align: center;
-
 }
 
 .banner-btn:hover{text-decoration: none;
 color:#fe4066;
-background-color:white; }
+background-color:white;}
 
 
 .header{position: relative;
@@ -157,6 +156,14 @@ button .agregar {
 	color: white;
 	text-decoration: none;
 }
+.card {
+	font-size: 150%;
+}
+
+.card-text {
+	font-size: 120%;
+	font-weight: bold;
+}
 
 table {
 	font-size: 1.5rem;
@@ -168,6 +175,10 @@ table {
 	color: black;
 	background-color: #fe4066;
 	border: 2px solid black;
+}
+
+p {
+	font-size: 20px;
 }
 
 
