@@ -69,6 +69,8 @@ function cargarCarrito(){
     </tr>`);
 }
 
+
+
 if(JSON.parse(sessionStorage.getItem("carrito")) != null){
     carrito = JSON.parse(sessionStorage.getItem("carrito", carrito))
     cargarCarrito()

@@ -155,7 +155,8 @@ h2 {
 button .agregar {
   background-color: black;
   color: white;
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
 
 .card {
   font-size: 150%; }
@@ -172,7 +173,8 @@ table {
   font-weight: bold;
   color: black;
   background-color: #fe4066;
-  border: 2px solid black; }
+  border: 2px solid black;
+  cursor: default; }
 
 p {
   font-size: 20px; }
